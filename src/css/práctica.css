@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    width: 100%;
+    height: 60px;
+    background-color: #000000;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.logo-header{
+    width: 80px;
+    height: 50px;
+    margin-left: 20px;
+}
+.header-button{
+    width: 90px;
+    height: 30px;
+    background-color: #172be2;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-right: 20px;
+    font-size: 12px;
+}
+.main-container{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#main-background{
+    background-image: url('../assets/Inicio-Práctica.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+ h1{
+    font-size: 30px;
+    color: aliceblue;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+
+    padding: 20px;
+ }
+ .main-p{
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    padding: 20px;
+ }
