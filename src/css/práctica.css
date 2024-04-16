@@ -36,19 +36,25 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 #main-background{
     background-image: url('../assets/Inicio-Práctica.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
+.icon-talentos{
+    width: 50px;
+    height: 120px;
+    position: absolute;
+    right:0;
+}
  h1{
     font-size: 30px;
+    padding: 20px 50px 10px 20px;
     color: aliceblue;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-
-    padding: 20px;
  }
  .main-p{
     color: #ffffff;
