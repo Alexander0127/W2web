@@ -42,7 +42,7 @@ header{
     justify-content: center ;
 }
 #main-background{
-    background-image: url('../assets/Inicio-Práctica.jpg');
+    background-image: url('../assets/Inicio-Práctica\ para\ PC.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     padding: 20px 0;
@@ -77,9 +77,11 @@ header{
 
  .beneficios-container{
     width: 100%;
-    height: auto;
+    height: 600px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: auto;
+    height:auto;
  }
 
  #section-beneficios-background{
@@ -205,4 +207,193 @@ header{
     background-image: url('../assets/W2\ Days.png');
     background-size: cover;
     margin: 0 10px;
+}
+
+/* SECCIÓN DE DESCUBRE LA EMPRESA */
+.section-descubre{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.descubre-background{
+    width: 100%;
+    height: 400px;
+    background-image: url('../assets/Familia\ W2.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.section-descubre h3{
+    font-size: 25px;
+    font-family:"Poppins", sans-serif;
+    color: #ff0000;
+    text-align: center;
+    padding: 20px;
+}
+
+/* CONTENEDORES DE EQUIPOS */
+
+.equipos-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.item-equipo-container{
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+}
+.item-equipo-text{
+    font-family:"Poppins", sans-serif ;
+}
+.item-equipo-button{
+    width: 150px;
+    height: 30px;
+    background-color: #172be2;
+    color: #ffffff;
+    border:none;
+    border-radius: 10px;
+}
+/* SECCIÓN DE PREGUNTAS FRECUENTES */
+.section-preguntas{
+    width: 100%;
+    height: auto;
+    background-image: url('../assets/Morado\ -\ Circulo.png');
+    background-size: cover;
+    color:#ffffff;
+    font-family:"Poppins", sans-serif;  
+    text-align: center;
+}
+.button-contactanos{
+    width: 200px;
+    height: 40px;
+    background-color: #172be2;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family:"Poppins", sans-serif;  
+    margin: 20px 0;
+    cursor: pointer;
+}
+.section-preguntas-tittle{
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.container-preguntas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0;
+}
+.text-preguntasfrecuentes{
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-preguntasfrecuentes h4{
+    font-size: 25px;
+    font-weight: 600;
+}
+.faq-container {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.question {
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+.question h3 {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.question p {
+    margin: 0;
+    padding: 10px;
+    display: none;
+    font-weight: 400;
+}
+.question p.show-answer {
+    display: block;
+}
+/* FOOTER */
+footer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 20px;
+    justify-content: center;
+}
+.social-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 300px;
+}
+.links-container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+h3{
+    margin-bottom: 10px;
+}
+.text-underline{
+    text-decoration: underline;
+    text-decoration-color: #172be2; 
+}
+#text-power{
+    color: #f8c039;
+    text-decoration: underline;
+    text-decoration-color: #ffffff; 
+}
+
+
+/* Para dispositivos móviles */
+@media (max-width: 768px) {
+    .descubre-background {
+        background-position: center; /* Centra la imagen vertical y horizontalmente */
+    }
+    #main-background{
+        background-image: url('../assets/Inicio-Práctica.jpg');
+    }
 }
