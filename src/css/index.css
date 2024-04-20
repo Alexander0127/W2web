@@ -188,11 +188,11 @@ td, th {
 }
 
 .w-icon-slider-right:before {
-  content: "î˜€";
+  content: ">";
 }
 
 .w-icon-slider-left:before {
-  content: "î˜";
+  content: "<";
 }
 
 .w-icon-nav-menu:before {
