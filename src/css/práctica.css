@@ -55,6 +55,11 @@ header{
     min-height: 600px;
 }
 
+.icon-flecha{
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
 .icon-talentos{
     width: 50px;
     height: 120px;
@@ -89,7 +94,14 @@ header{
     width: 100%;
     height:auto;
  }
-
+.section-beneficios-container{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: auto;
+}
  .main-container-beneficios{
     width: 100%;
     height: auto;
@@ -258,15 +270,18 @@ header{
 }
 
 /* CONTENEDORES DE EQUIPOS */
+.equipos-container::-webkit-scrollbar {
+    display: none; /* Ocultar la barra de desplazamiento en Chrome y Safari */
+}
 
 .equipos-container{
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
     padding: 20px;
+    overflow-x: auto;
 }
 
 .item-equipo-container{
@@ -280,6 +295,7 @@ header{
     border-radius: 15px;
     text-align: center;
     overflow: hidden;
+    flex-shrink: 0; 
 }
 
 .item-equipo-text{
@@ -287,6 +303,10 @@ header{
     background-color: #172be2;
     color: #ffffff;
     padding: 20px;
+}
+
+.item-equipo-text h4{
+    font-size: 23px;
 }
 
 .item-equipo-img{
@@ -308,8 +328,54 @@ header{
     border:none;
     border-radius: 10px;
     margin: 20px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
+/* COLORES POR EQUIPOS */
+
+#equipo-finanzas .item-equipo-button,
+#equipo-finanzas .item-equipo-text{
+    background-color: #8a1571;
+}
+#equipo-comunicaciones{
+    border: 2px solid #ff0000;
+}
+#equipo-comunicaciones .item-equipo-text{
+    background-color: #ffffff;
+    color: #ff0000;
+}
+#equipo-comunicaciones .item-equipo-button{
+    background-color: #ff0000;
+    color: #ffffff;
+}
+#equipo-otro .item-equipo-text{
+    background-color: #ffffff;
+    color: #000000;
+}
+#equipo-otro{
+    border-radius: 10   px; /* Ajusta el radio de borde según sea necesario */
+    overflow: hidden;
+    margin: 0;
+    border: .5px solid #172be2;
+}
+.gradient-border {
+    border: 3px solid; /* Borde transparente */
+    border-image: linear-gradient(to right, #eb0413, #2b27cf) 1; 
+    width: 250px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    text-align: center;
+    overflow: hidden;
+    flex-shrink: 0; 
+}
+#equipo-otro .item-equipo-button{
+    background: linear-gradient(to right, #eb0413, #2b27cf);
+}
 /* SECCIÓN DE PREGUNTAS FRECUENTES */
 
 .section-preguntas{
@@ -323,13 +389,15 @@ header{
 }
 
 .button-contactanos{
-    width: 200px;
-    height: 40px;
+    width: 220px;
+    height: 50px;
     background-color: #172be2;
     border: none;
     border-radius: 10px;
     color: #ffffff;
     font-family:"Poppins", sans-serif;  
+    font-weight: 600;
+    font-size: 18px;
     margin: 20px 0;
     cursor: pointer;
 }
@@ -338,6 +406,7 @@ header{
     width: 100%;
     height: auto;
     padding: 50px;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -350,7 +419,6 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 30px 0;
 }
 
 .text-preguntasfrecuentes{
@@ -451,4 +519,30 @@ h3{
     #main-background{
         background-image: url('../assets/Inicio-Práctica.jpg');
     }
+
+    .equipos-container{
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
 }
+
+/* Definición de la animación */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Desplazar hacia arriba */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Sin desplazamiento */
+    }
+}
+
+/* Estilos para los contenedores */
+.section-beneficios-container .main-container-beneficios {
+    opacity: 0; /* Inicialmente ocultos */
+    animation: fade-in 0.5s ease forwards; /* Aplicar animación */
+}
+
